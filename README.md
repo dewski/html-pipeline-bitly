@@ -1,6 +1,6 @@
 # HTML::Pipeline::BitlyLinkFilter
 
-TODO: Write a gem description
+A HTML Pipeline filter for extracting URLs and making them bit.ly links.
 
 ## Installation
 
@@ -18,7 +18,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To configure this filter to exclude certain hostnames you can set which hosts you want to be excluded from the Bitly shortener:
+
+```
+HTML::Pipeline::BitlyLinkFilter.allowed_hostnames = ['github.com', 'hire.githubapp.com', 'team.githubapp.com', 'bit.ly']
+```
+
+This pipeline filter also requires Redis as a backend storage, so with that you can just pass in your global instance of your Redis connection like below or instantiate your own:
+
+```ruby
+HTML::Pipeline::BitlyLinkFilter.redis = $redis
+```
+
+By default all links will be prefixed in redis with the `bitly` namespace, if you'd like to change this you can just set it like below:
+
+```ruby
+HTML::Pipeline::BitlyLinkFilter.redis_namespace = 'hire'
+```
+
+Happy Pipelining!
 
 ## Contributing
 
