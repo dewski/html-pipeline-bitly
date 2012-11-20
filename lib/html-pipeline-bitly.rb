@@ -1,0 +1,1 @@
+require 'html/pipeline/bitly'
