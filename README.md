@@ -20,8 +20,8 @@ Or install it yourself as:
 
 To configure this filter to exclude certain hostnames you can set which hosts you want to be excluded from the Bitly shortener:
 
-```
-HTML::Pipeline::BitlyLinkFilter.allowed_hostnames = ['github.com', 'hire.githubapp.com', 'team.githubapp.com', 'bit.ly']
+```ruby
+HTML::Pipeline::BitlyLinkFilter.allowed_hostnames = ['github.com', 'bit.ly']
 ```
 
 This pipeline filter also requires Redis as a backend storage, so with that you can just pass in your global instance of your Redis connection like below or instantiate your own:
