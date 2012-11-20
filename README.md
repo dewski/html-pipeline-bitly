@@ -6,7 +6,9 @@ A HTML Pipeline filter for extracting URLs and making them bit.ly links.
 
 Add this line to your application's Gemfile:
 
-    gem 'html-pipeline-bitly'
+```ruby
+gem 'html-pipeline-bitly'
+```
 
 And then execute:
 
