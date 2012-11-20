@@ -1,3 +1,4 @@
+require 'html/pipeline/filter'
 require 'redis'
 require 'bitly'
 
