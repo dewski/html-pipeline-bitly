@@ -4,7 +4,10 @@ require 'bitly'
 
 module HTML
   class Pipeline
-    # HTML Filter for replacing http github urls with https versions.
+    # HTML Filter for replacing non-whitelisted urls with bit.ly
+    # shortened URLs.
+    #
+    # Useful if you need to mask HTTP referer headers.
     class BitlyLinkFilter < Filter
       class << self
         def redis
