@@ -1,10 +1,13 @@
+require 'redis'
+require 'bitly'
+
 module HTML
   class Pipeline
     # HTML Filter for replacing http github urls with https versions.
     class BitlyLinkFilter < Filter
       class << self
         def redis
-          @redis
+          @redis ||= Redis.new
         end
 
         def redis=(redis)
