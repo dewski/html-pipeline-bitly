@@ -16,6 +16,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
+  gem.add_dependency 'html-pipeline'
   gem.add_dependency 'redis'
   gem.add_dependency 'bitly', '~> 0.8'
 end
