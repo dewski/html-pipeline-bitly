@@ -7,8 +7,8 @@ Gem::Specification.new do |gem|
   gem.version       = '0.1'
   gem.authors       = ["Garrett Bjerkhoel"]
   gem.email         = ["me@garrettbjerkhoel.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{A HTML Pipeline for extracting URLs and making them bit.ly links.}
+  gem.summary       = %q{A HTML Pipeline for extracting URLs and making them bit.ly links.}
   gem.homepage      = 'https://github.com/dewski/html-pipeline-bitly'
 
   gem.files         = `git ls-files`.split($/)
