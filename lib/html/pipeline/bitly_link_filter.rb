@@ -33,6 +33,17 @@ module HTML
         def allowed_hostnames=(hostnames=[])
           @allowed_hostnames = hostnames
         end
+
+        def bitly_client
+          @bitly_client ||= begin
+            Bitly.use_api_version_3
+            Bitly.new(ENV['BITLY_LOGIN'], ENV['BITLY_API_KEY'])
+          end
+        end
+
+        def bitly_client=(client)
+          @bitly_client = client
+        end
       end
 
       def call
@@ -65,7 +76,7 @@ module HTML
       #
       # Returns short url if stored, false if not.
       def shorten(url)
-        url = client.shorten(url)
+        url = self.class.bitly_client.shorten(url)
         if save(url.long_url, url.short_url)
           url.short_url
         else
@@ -115,13 +126,6 @@ module HTML
 
       def digest(object)
         Digest::MD5.hexdigest object.to_s
-      end
-
-      def client
-        @client ||= begin
-          Bitly.use_api_version_3
-          Bitly.new(ENV['BITLY_LOGIN'], ENV['BITLY_API_KEY'])
-        end
       end
     end
   end
