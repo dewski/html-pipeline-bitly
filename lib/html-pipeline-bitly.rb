@@ -1,1 +1,1 @@
-require 'html/pipeline/bitly'
+require 'html/pipeline/bitly_link_filter'
