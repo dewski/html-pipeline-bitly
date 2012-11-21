@@ -5,8 +5,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |gem|
   gem.name          = 'html-pipeline-bitly'
   gem.version       = '0.0.1'
-  gem.authors       = ["Garrett Bjerkhoel"]
-  gem.email         = ["me@garrettbjerkhoel.com"]
+  gem.authors       = ['Garrett Bjerkhoel']
+  gem.email         = ['me@garrettbjerkhoel.com']
   gem.description   = %q{A HTML Pipeline filter for extracting URLs and making them bit.ly links.}
   gem.summary       = %q{A HTML Pipeline filter for extracting URLs and making them bit.ly links.}
   gem.homepage      = 'https://github.com/dewski/html-pipeline-bitly'
